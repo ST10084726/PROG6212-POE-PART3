@@ -1,0 +1,48 @@
+﻿@page
+@model ModuleCalculatorWeb.Pages.Semesters.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Semester[0].semesterName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Semester[0].startDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Semester[0].Weeks)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Semester) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.semesterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.startDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weeks)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SemId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SemId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SemId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
