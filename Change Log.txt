@@ -1,0 +1,18 @@
+Changes made to Task 1
+----------------------------------
+-- Added a login, registration window before the Module Calculator application
+-- Now the application runs with a database
+-- Improved comments
+-- Added a splash screen
+-- Added alot of Screen space due to feeedback
+-- Removed one datagrid and combine all data into one datagrid
+-- All elements now fit in max mode
+----------------------------------
+Changes made to Task 2
+----------------------------------
+-- Change the project from a wpf to a web application
+-- Removed the splash screen
+-- Added a Semester table to the poject/database
+-- Improved comments
+-- Updated UML diagram
+-- Added a User Manual

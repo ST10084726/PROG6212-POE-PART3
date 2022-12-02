@@ -1,0 +1,32 @@
+-- Creation of the tables --
+create table users(
+UserId int IDENTITY(1,1) PRIMARY KEY,
+Username varchar(25) not null,
+hashPassword varchar(255) not null
+);
+
+create table Modules(
+moduleID int IDENTITY(1,1) PRIMARY KEY,
+moduleCode varchar(10) not null,
+moduleName varchar(50) not null,
+credits int not null,
+hrs int not null,
+studyDate date not null,
+Weeks int not null,
+selfStudy int not null,
+studyHrs int not null,
+remain int not null
+);
+
+Create table Semester(
+semesterID int IDENTITY(1,1) PRIMARY KEY,
+semesterName varchar(50) not null,
+startDate date not null,
+Weeks int not null
+);
+
+
+-- View all the data in each table --
+select * from dbo.users
+select * from dbo.Modules
+select * from dbo.Semester
